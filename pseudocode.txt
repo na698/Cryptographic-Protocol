@@ -1,0 +1,29 @@
+BEGIN Protocol Simulation
+
+// Step 1: RSA Key Generation
+Generate RSA key pair for H&R
+Generate RSA key pair for Seller's Solicitor
+
+// Step 2: AES Key Generation and Secure Sharing
+Generate AES key
+Encrypt AES key using Solicitor's RSA public key
+Solicitor decrypts AES key using their RSA private key
+
+// Step 3: Contract Encryption
+Define contract text
+Encrypt contract using AES key
+
+// Step 4: ECDSA Signature
+Generate ECDSA key pair for Mrs. Harvey
+Sign contract using ECDSA private key
+
+// Step 5: Signature Verification
+Decrypt contract using AES key
+Verify signature using ECDSA public key
+
+IF signature is valid THEN
+    Display "Contract accepted"
+ELSE
+    Display "Contract rejected"
+
+END Protocol Simulation
